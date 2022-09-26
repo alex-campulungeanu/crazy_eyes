@@ -1,52 +1,49 @@
-body {
-    background-color: lightgrey;
-    color: #fff;
+/* * {
+    border: 1px solid blue;
+    margin: 0;
     padding: 0;
-    margin: 0 ;
-}
-main {
+} */
+
+.main {
     display: grid;
     place-items: center;
-    min-height: 100vh;
-    position: relative;
 }
-.rick {
+
+.container {
+    width: 50vw;
     position: relative;
-    z-index: 0;
-    background: none;
-    user-select: none;
-    pointer-events: none;
-    transition: transform .4s;
-    transition-delay: .25s;
+    /* display: block; */
 }
+
+.image {
+    width: 100%;
+}
+
 .eye-container {
-    position: relative;
-    display: block;
+    position: absolute;
     border-radius: 50%;
-    background-color: #fff;
-    transform: rotate(30deg);
-    width: 50px;
-    height: 50px;
+    background-color: red;
+    width: 5vw;
+    height: 5vw;
 }
-.eye-container.left {
-    top: -415px;
-    left: 175px;
+
+.left-eye {
+    top: 37%;
+    left: 36%;
 }
-.eye-container.right {
-    top: -465px;
-    left: 275px;
+
+.right-eye {
+    top: 37%;
+    left: 56%;
 }
-.eye {
+
+.eyeball {
     position: absolute;
     bottom: 3px;
     right: 2px;
     display: block;
-    width: 17px;
-    height: 17px;
+    width: 30%;
+    height: 30%;
     border-radius: 50%;
     background-color: #000;
-}
-img {
-    max-width: 100%;
-    vertical-align: top;
 }

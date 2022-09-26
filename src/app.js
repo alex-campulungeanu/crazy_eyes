@@ -1,18 +1,17 @@
-const anchor = document.getElementById('anchor')
-const rekt = anchor.getBoundingClientRect()
-const anchorX = rekt.left + rekt.width / 2
-const anchorY = rekt.top + rekt.height / 2
+const image = document.getElementById('im')
+const rekt = image.getBoundingClientRect()
+const imageX = rekt.left + rekt.width / 2
+const imageY = rekt.top + rekt.height / 2
 const eyesContainer = document.querySelectorAll('.eye-container')
 
 document.addEventListener('mousemove', (e) => {
     const mouseX = e.clientX
     const mouseY = e.clientY
 
-    const angleDeg = angle(mouseX, mouseY, anchorX, anchorY)
-
+    const angleDeg = angle(mouseX, mouseY, imageX, imageY)
     eyesContainer.forEach(eye => {
         eye.style.transform = `rotate(${90 + angleDeg}deg)`
-        anchor.style.filter = `hue-rotate(${angleDeg}deg)`
+        image.style.filter = `hue-rotate(${angleDeg}deg)`
     })
 })
 
